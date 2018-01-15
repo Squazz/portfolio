@@ -18,7 +18,7 @@ namespace Portfolio
 
         private static async Task AsyncCall()
         {
-            string ApiKey = "API";
+            string ApiKey = "KEY";
             string SecretKey = "SECRET";
 
             Console.WriteLine("--------------------------");
@@ -46,13 +46,18 @@ namespace Portfolio
 
             foreach (var balance in balances)
             {
-                if (balance.Asset == "BTC")
+                try
+                {
+                    var data = await client.GetAllOrders(new AllOrdersRequest()
+                    {
+                        Symbol = balance.Asset + "BTC"
+                    });
+                    test.AddRange(data);
+                }
+                catch (Exception)
+                {
                     continue;
-
-                var data = await client.GetAllOrders(new AllOrdersRequest() {
-                    Symbol = "BTC" + balance.Asset
-                });
-                test.AddRange(data);
+                }
             }
 
             var stop = 0;

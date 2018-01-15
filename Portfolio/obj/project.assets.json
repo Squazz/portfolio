@@ -5692,11 +5692,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Repos\\Portfolio\\Portfolio\\Portfolio.csproj",
+      "projectUniqueName": "D:\\Repos\\portfolio\\Portfolio\\Portfolio.csproj",
       "projectName": "Portfolio",
-      "projectPath": "D:\\Repos\\Portfolio\\Portfolio\\Portfolio.csproj",
+      "projectPath": "D:\\Repos\\portfolio\\Portfolio\\Portfolio.csproj",
       "packagesPath": "C:\\Users\\kaspe\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\Portfolio\\Portfolio\\obj\\",
+      "outputPath": "D:\\Repos\\portfolio\\Portfolio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
