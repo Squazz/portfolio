@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "BinanceDotNet/3.0.1": {
+      "BinanceDotNet/3.1.0-alpha3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
@@ -1623,12 +1623,12 @@
     }
   },
   "libraries": {
-    "BinanceDotNet/3.0.1": {
-      "sha512": "KMu5IbmtrAdBTBd/eUjtdoAtiGJJJLSHEGKUYFXb3ZvHeTRpodJ7KWCZrxHAlMERgaRKR3bi7P394C3r6djTyA==",
+    "BinanceDotNet/3.1.0-alpha3": {
+      "sha512": "MAIorCapKD/uuVqlevbtK+WAqH4Sp6ydSDTYOVLRh7/OB5Fqh6T54g+gI5qUyXxadA2ssASR+ATvlvwqna0j4g==",
       "type": "package",
-      "path": "binancedotnet/3.0.1",
+      "path": "binancedotnet/3.1.0-alpha3",
       "files": [
-        "binancedotnet.3.0.1.nupkg.sha512",
+        "binancedotnet.3.1.0-alpha3.nupkg.sha512",
         "binancedotnet.nuspec",
         "lib/netcoreapp2.0/BinanceExchange.API.dll"
       ]
@@ -5676,7 +5676,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "BinanceDotNet >= 3.0.1",
+      "BinanceDotNet >= 3.1.0-alpha3",
       "Microsoft.NETCore.App >= 2.0.0",
       "System.Linq >= 4.3.0",
       "System.Linq.Expressions >= 4.3.0"
@@ -5728,7 +5728,7 @@
         "dependencies": {
           "BinanceDotNet": {
             "target": "Package",
-            "version": "[3.0.1, )"
+            "version": "[3.1.0-alpha3, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

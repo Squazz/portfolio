@@ -1,11 +1,13 @@
 ﻿using BinanceExchange.API.Client;
-using BinanceExchange.API.Market;
 using BinanceExchange.API.Models.Request;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
+using NLog;
+using LogLevel = NLog.LogLevel;
 
 namespace Portfolio
 {
@@ -18,6 +20,16 @@ namespace Portfolio
 
         private static async Task AsyncCall()
         {
+            //Logging Configuration. 
+            //Ensure that `nlog.config` is configured as you want, and is copied to output directory.
+            var loggerFactory = new LoggerFactory();
+            loggerFactory.AddNLog(new NLogProviderOptions { CaptureMessageTemplates = true, CaptureMessageProperties = true });
+            //This utilises the nlog.config from the build directory
+            loggerFactory.ConfigureNLog("nlog.config");
+            //For the sakes of this example we are outputting only fatal logs, debug being the lowest.
+            LogManager.GlobalThreshold = LogLevel.Debug;
+            var logger = LogManager.GetLogger("*");
+
             string ApiKey = "KEY";
             string SecretKey = "SECRET";
 
@@ -30,7 +42,7 @@ namespace Portfolio
             {
                 ApiKey = ApiKey,
                 SecretKey = SecretKey,
-                //Logger = logger,
+                Logger = logger,
             });
 
             Console.WriteLine("Interacting with Binance...");
@@ -43,6 +55,17 @@ namespace Portfolio
             var balances = accountInformation.Balances.Where(x => x.Free + x.Locked > 0);
 
             List<BinanceExchange.API.Models.Response.OrderResponse> test = new List<BinanceExchange.API.Models.Response.OrderResponse>();
+
+            var EosOrders = await client.GetAllOrders(new AllOrdersRequest()
+            {
+                Symbol = "EOSBTC"
+            });
+
+
+            var TrxOrders = await client.GetAllOrders(new AllOrdersRequest()
+            {
+                Symbol = "TRXBTC"
+            });
 
             foreach (var balance in balances)
             {
@@ -59,8 +82,6 @@ namespace Portfolio
                     continue;
                 }
             }
-
-            var stop = 0;
         }
     }
 }

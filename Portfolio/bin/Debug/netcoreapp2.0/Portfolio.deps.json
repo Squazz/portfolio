@@ -1,14 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "228f869f6d5ea001496a80c0f0a1e88d86e6acb3"
+    "signature": "a9fd1e2f9edcce205d8ecf775736b9e3b6a6c6c2"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Portfolio/1.0.0": {
         "dependencies": {
-          "BinanceDotNet": "3.0.1",
+          "BinanceDotNet": "3.1.0-alpha3",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0"
         },
@@ -16,7 +16,7 @@
           "Portfolio.dll": {}
         }
       },
-      "BinanceDotNet/3.0.1": {
+      "BinanceDotNet/3.1.0-alpha3": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
           "NLog.Extensions.Logging": "1.0.0-rtm-rc1",
@@ -970,12 +970,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BinanceDotNet/3.0.1": {
+    "BinanceDotNet/3.1.0-alpha3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KMu5IbmtrAdBTBd/eUjtdoAtiGJJJLSHEGKUYFXb3ZvHeTRpodJ7KWCZrxHAlMERgaRKR3bi7P394C3r6djTyA==",
-      "path": "binancedotnet/3.0.1",
-      "hashPath": "binancedotnet.3.0.1.nupkg.sha512"
+      "sha512": "sha512-MAIorCapKD/uuVqlevbtK+WAqH4Sp6ydSDTYOVLRh7/OB5Fqh6T54g+gI5qUyXxadA2ssASR+ATvlvwqna0j4g==",
+      "path": "binancedotnet/3.1.0-alpha3",
+      "hashPath": "binancedotnet.3.1.0-alpha3.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
